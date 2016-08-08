@@ -73,7 +73,8 @@ input, textarea {
     color: white; }
   #branchesAccordion table th {
     background: #15355e;
-    color: white; }
+    color: white;
+    letter-spacing: .2em; }
 
 .contact-form .form-control:focus {
   webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(21, 53, 94, 0.4);
