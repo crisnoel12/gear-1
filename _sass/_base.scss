@@ -79,7 +79,9 @@ input, textarea{
     & table th{
         background: $primary-color;
         color: white;
-        letter-spacing: .2em;
+        & p{
+            letter-spacing: .2em;
+        }
     }
 }
 .contact-form{
