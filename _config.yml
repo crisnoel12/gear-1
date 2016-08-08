@@ -10,7 +10,7 @@ title: Gear-1 Driving School
 email: gear1drivingschool@yahoo.com
 facebook: https://www.facebook.com/Gear-1-Driving-School-465129803530919
 description: Gear-1 is a driving school in the Philippines, designed for beginners as well as experienced drivers to become responsible and safe road users. We offer a quality, affordable and effective training programs that will help our students become responsible drivers.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/gear-1" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 exclude:
   - package.json
