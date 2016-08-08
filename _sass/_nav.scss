@@ -23,6 +23,11 @@
         & .glyphicon{
             margin-right: 8px;
         }
+        & li{
+            @media screen and (min-width: 768px){
+                margin: 0 -5px;
+            }
+        }
         & a{
             &:hover{
                 color: lighten($primary-color, 10%) !important;
