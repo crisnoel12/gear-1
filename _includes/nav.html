@@ -10,14 +10,14 @@
         <span class="icon-bar"></span>
       </button>
       <a href="{{"/"}}">
-          <img class="logo" src="{{ "assets/gear-1.png" prepend: site.baseurl }}" alt="Gear-1 Driving School Logo" />
+          <img class="logo" src="{{ "/assets/gear-1.png" | prepend: site.baseurl }}" alt="Gear-1 Driving School Logo" />
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ "/" prepend: site.baseurl }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="{{ "/" | prepend: site.baseurl }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
         {% if page.url == "/" %}
             <li><a href="#about"><span class="glyphicon glyphicon-user"></span>About Us</a></li>
             <li><a href="#courses"><span class="glyphicon glyphicon-list-alt"></span>Courses</a></li>
