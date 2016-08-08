@@ -60,28 +60,6 @@ input, textarea{
     border-radius: 100%;
     margin-right: 20px;
 }
-.row.row-md-eq-height {
-    @media screen and (min-width: 992px){
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        & > [class*='col-'] {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-        }
-    }
-}
 .input-lg{
     font-size: inherit;
 }
@@ -116,7 +94,7 @@ input, textarea{
             margin-top: 0;
         }
         @media screen and (min-width: 992px){
-            margin: 8px 0;
+            margin: 14px 0;
             &:last-child{
                 margin-bottom: 0;
             }
