@@ -229,6 +229,9 @@ input, textarea {
     z-index: 1000; }
   .navbar .navbar-nav .glyphicon {
     margin-right: 8px; }
+  @media screen and (min-width: 768px) {
+    .navbar .navbar-nav li {
+      margin: 0 -5px; } }
   .navbar .navbar-nav a:hover {
     color: #1e4d88 !important; }
   @media screen and (min-width: 768px) {
