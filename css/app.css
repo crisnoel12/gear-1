@@ -85,7 +85,7 @@ input, textarea {
     margin-top: 0; }
   @media screen and (min-width: 992px) {
     .contact-form input.form-control {
-      margin: 14px 0; }
+      margin: 15px 0; }
       .contact-form input.form-control:last-child {
         margin-bottom: 0; } }
 
