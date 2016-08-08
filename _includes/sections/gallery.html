@@ -1,0 +1,10 @@
+<!-- GALLERY SECTION -->
+<div id="gallery" class="row section">
+    <div id="lightgallery" class="col-xs-12 listing">
+        {% for picture in site.data.gallery %}
+            <a href="assets/gallery/{{ picture }}">
+                <img class="col-xs-6 col-sm-4 col-md-2" src="assets/gallery/{{ picture }}" alt="" />
+            </a>
+        {% endfor %}
+    </div>
+</div>

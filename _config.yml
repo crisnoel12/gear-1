@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Gear-1 Driving School
+email: gear1drivingschool@yahoo.com
+facebook: https://www.facebook.com/Gear-1-Driving-School-465129803530919
+description: Gear-1 is a driving school in the Philippines, designed for beginners as well as experienced drivers to become responsible and safe road users. We offer a quality, affordable and effective training programs that will help our students become responsible drivers.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+
+# Build settings
+markdown: kramdown
+permalink: /:title

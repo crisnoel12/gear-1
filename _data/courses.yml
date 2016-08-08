@@ -1,0 +1,70 @@
+- package: Automatic
+  icon: icon-meter2
+  description: Beginner-friendly course, automatics are great in traffic situations.
+  hours: [5, 7, 10, 15, 20]
+  programs:
+      - name: Automatic (Altis/Vios)
+        prices: [ '4,500', '6,300', '9,000', '13,500', '18,000']
+
+      - name: Automatic SUV (Innova)
+        prices: ['5,200', '7,250', '10,300', '15,400', '20,500']
+
+      - name: Automatic SUV (Montero)
+        prices: ['6,300', '8,800', '12,500', '18,700', '24,800']
+
+- package: Manual
+  icon: icon-meter
+  description: Advanced course, manuals are generally cheaper and more fuel efficient.
+  hours: [5, 7, 10, 15, 20]
+  programs:
+      - name: Regular Course
+        prices: [ '2,100', '2,900', '4,100', '6,150', '8,200']
+
+      - name: Special Course (Altis/Vios)
+        prices: ['2,400', '3,300', '4,650', '6,900', '9,100']
+
+      - name: Gear-1 Course <br> (1-Instructor) (Altis/Vios)
+        prices: ['2,900', '4,000', '5,700', '8,500', '11,300']
+
+      - name: Manual SUV (Innova)
+        prices: ['3,600', '5,000', '7,100', '10,500', '13,800']
+
+- package: Executive
+  icon: icon-user-tie
+  description: Get picked up at your home and dropped off to home/office after your lesson.
+  hours: [5, 7, 10, 15, 20]
+  programs:
+      - name: Automatic (Altis/Vios)
+        prices: ['5,500', '7,700', '11,000', '17,000', '22,000']
+
+      - name: Automatic SUV (Innova)
+        prices: ['6,300', '8,800', '12,500', '18,700', '24,800']
+
+      - name: Automatic SUV (Montero)
+        prices: ['8,000', '11,200', '16,000', '24,000', '31,000']
+
+      - name: Manual (Altis/Vios)
+        prices: ['5,500', '7,700', '11,000', '16,500', '22,000']
+
+      - name: Manual SUV (Innova)
+        prices: ['5,600', '7,800', '11,100', '16,600', '22,100']
+
+- package: Rush
+  icon: icon-forward
+  description: For those who want a crash course. One to two days straight driving.
+  hours: [5, 7, 8, 10]
+  programs:
+      - name: Manual (Altis/Vios)
+        prices: ['3,200', '4,400', '5,000', '6,200']
+
+      - name: Manual SUV (Innova)
+        prices: ['3,800', '5,300', '6,000', '7,400']
+
+      - name: Automatic (Altis/Vios)
+        prices: ['5,000', '7,000', '8,000', '10,000']
+
+      - name: Automatic SUV (Innova)
+        prices: ['5,500', '7,700', '8,800', '11,000']
+
+      - name: Automatic SUV (Montero)
+        prices: ['8,750', '12,250', '14,000', '17,500']

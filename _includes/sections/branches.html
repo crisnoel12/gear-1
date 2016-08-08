@@ -1,0 +1,58 @@
+<!-- BRANCHES SECTION -->
+<div id="branches" class="row section">
+    <div class="row heading">
+        <h2 class="headline"><span>Branches</span></h2>
+        <i><b>*We have over 15 branches and growing.</b></i>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel-group" id="branchesAccordion" role="tablist" aria-multiselectable="true">
+              {% for branch in site.data.branches %}
+                  {% assign province = branch.province %}
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="province{{province}}">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#branchesAccordion" href="#collapse{{province}}" aria-expanded="true" aria-controls="collapse{{province}}">
+                          {{ province }}
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse{{province}}" class="panel-collapse collapse {% if forloop.first == true %}in{% endif %}" role="tabpanel" aria-labelledby="province{{province}}">
+                      <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <th class="text-center"><span class="glyphicon glyphicon-map-marker"></span> Location</th>
+                                <th class="text-center"><span class="glyphicon glyphicon-phone-alt"></span> Landline</th>
+                            </tr>
+                            {% for office in branch.offices %}
+                                <tr>
+                                    <td>{{ office.location }}</td>
+                                    <td>{{ office.telephone }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+               {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4 text-left lecture">
+            <h3>Lecture Rooms</h3>
+            <ul>
+                <li>Pearl Bldg. National Highway, Platero, Biñan</li>
+                <li>#25 National Highway Putatan Muntinlupa City</li>
+                <li>Aguinaldo Highway Salitran II Dasmariñas</li>
+                <li>177B V. Agustin Bldg. Aguinaldo Highway Panapaan I Bacoor</li>
+                <li>#59 Doña Soledad Better Living Subd. Paranaque City.</li>
+            </ul>
+            <h3>Topics</h3>
+            <ol>
+                <li>Defensive Driving Strategies</li>
+                <li>Traffic Laws, Rules and Regulations</li>
+                <li>Adverse Driving Condition Techniques and Handling Emergencies</li>
+                <li>Preventive Maintenance Techniques and Tips.</li>
+            </ol>
+        </div>
+    </div>
+</div>

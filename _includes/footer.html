@@ -1,0 +1,71 @@
+<!-- CONTACT SECTION -->
+<div id="contact" class="row section">
+    <div class="row heading">
+        <h2 class="headline"><span>Contact Us</span></h2>
+        <i><b>*Message us here for any inquiries.</b></i>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form class="contact-form" action="https://formspree.io/your@email.com"
+                  method="POST">
+                <div class="row row-md-eq-height">
+                    <div class="col-md-6">
+                        <input class="form-control input-lg field" type="text" name="name" placeholder="Name" required>
+                        <input class="form-control input-lg field" type="email" name="_replyto" placeholder="E-mail" required>
+                        <input class="form-control input-lg field" type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="col-md-6">
+                        <textarea class="form-control input-lg field" name="message" rows="8" placeholder="Message" required></textarea>
+                    </div>
+                </div>
+                <div class="row text-right">
+                    <input class="btn" type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row contact-info">
+    <div class="col-sm-6 social">
+        <p>
+            Connect with us: <a target="_blank" href="{{ site.facebook }}"><span class="icon icon-facebook"></span></a>
+        </p>
+    </div>
+    <div class="col-sm-6 email">
+        <p>
+            {{ site.email }}
+        </p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="row">
+    <div class="col-md-6">
+        <ul class="footer-menu text-left">
+            <li><a href="{{ "/#" prepend: site.baseurl }}">Home</a><span class="seperator"></span></li>
+            <li><a href="{{ "/#about" prepend: site.baseurl }}">About Us</a></li>
+            <li><a href="{{ "/#courses" prepend: site.baseurl }}">Courses</a></li>
+            <li><a href="{{ "/#branches" prepend: site.baseurl }}">Branches</a></li>
+            <li><a href="{{ "/#gallery" prepend: site.baseurl }}">Gallery</a></li>
+            <li><a href="{{ "/#contact" prepend: site.baseurl }}">Contact Us</a></li>
+        </ul>
+        <ul class="footer-menu text-left">
+            <li><a href="{{ "/policies" | prepend: site.baseurl }}">Policies</a></li>
+            <li><a href="{{ "/reminders" | prepend: site.baseurl }}">Reminders</a></li>
+        </ul>
+    </div>
+    <div class="col-md-4 col-md-offset-2 text-left">
+        <p class="copyright">
+            ALL RIGHTS RESERVED <a href="./">GEAR-1 DRIVING SCHOOL</a>  &COPY; 2016
+            <br>
+            Website Designed & Developed by <a href="#">Cris Noel</a>
+        </p>
+    </div>
+</footer>
+</div> <!-- END PAGE CONTAINER -->
+<a href="#" class="top-btn" title="Go to top">
+    <span class="glyphicon glyphicon-menu-up"></span>
+</a>
+
+{% include scripts.html %}

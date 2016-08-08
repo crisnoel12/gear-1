@@ -1,0 +1,67 @@
+<!-- COURSES SECTION -->
+<div id="courses" class="row section">
+    <div class="row heading">
+        <h2 class="headline"><span>Courses</span></h2>
+        <i><b>*Driving schedules from 7am to 7pm, Monday to Sunday.</b></i>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="row row-md-eq-height">
+                {% for course in site.data.courses %}
+                    <div class="col-sm-6 col-md-3 package">
+                        <div class="{{ course.package }}">
+                            <span class="icon {{ course.icon }}"></span>
+                            <h4>{{ course.package }}</h4>
+                            <hr>
+                            <p>{{ course.description }}</p>
+                            <a class="btn" data-toggle="modal" data-target="#modal{{ course.package }}">View Prices</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pricing Modals -->
+{% for course in site.data.courses %}
+    <div class="modal fade" id="modal{{ course.package }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="modalLabel-Base">{{ course.package }} Course Pricing</h4>
+          </div>
+          <div class="modal-body">
+              <div class="table-responsive">
+                  <table class="table table-striped table-hover table-pricing">
+                      <tr>
+                          <th></th>
+                          {% for hours in course.hours %}
+                              <th class="text-center">{{ hours }} hours</th>
+                          {% endfor %}
+                      </tr>
+                      {% for program in course.programs %}
+                          <tr>
+                              <th class="text-right">{{ program.name }}</th>
+                              {% for price in program.prices %}
+                                  <td><span class="peso-sign">&#x20B1;</span> {{ price }}</td>
+                              {% endfor %}
+                          </tr>
+                      {% endfor %}
+                  </table>
+              </div>
+              <div class="row">
+                  <div class="col-sm-6 text-center">
+                       <i><b>*5-7 hours for refresher</b></i>
+                  </div>
+                  <div class="col-sm-6 text-center">
+                      <i><b>*10-20 hours for beginner</b></i>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endfor %}

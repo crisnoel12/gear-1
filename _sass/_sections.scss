@@ -1,0 +1,155 @@
+// Section styles
+.section{
+    background: white;
+    border-bottom: 1px solid #dedede;
+    text-align: center;
+    padding: 25px 50px 50px;
+}
+#about{
+    & p{
+        font-size: 1.2em;
+        letter-spacing: .05em;
+        line-height: 1.8;
+    }
+    @media screen and (min-width: 992px){
+        & .mission{
+            border-right: 1px solid lightgrey;
+        }
+        & .mission h3, .vision h3{
+            color: grey;
+        }
+    }
+
+}
+#courses{
+    & .package{
+        & > div{
+            height: 100%;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 25px;
+            background: whitesmoke;
+            color: black;
+            & .icon{
+                font-size: 4em;
+            }
+            & hr{
+                margin-top: 10px;
+                border-color: black;
+            }
+            & .btn{
+                border-radius: 25px;
+            }
+        }
+    }
+}
+#branches{
+    & .lecture{
+        margin-top: 20px;
+        @media screen and (min-width: 992px){
+            background: whitesmoke;
+        }
+    }
+}
+#gallery, #gallery .listing{
+    padding: 0;
+}
+#gallery{
+    & .listing{
+        padding: 0;
+        margin-bottom: 0;
+        & img{
+            padding: 0;
+            max-height: 120px;
+            &:hover{
+                opacity: .7;
+            }
+            @media screen and (min-width: 1200px){
+                max-height: 146.250px;
+            }
+        }
+    }
+}
+.contact-info{
+    text-align: center;
+    color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    @media screen and (min-width: 768px){
+        & p{
+            font-size: 1.2em;
+        }
+        // Slant edge of social div
+        & .social{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -18px;
+                height: 50px;
+                width: 36px;
+                background-color: #333333 !important;
+                -webkit-transform: skewX(-33deg);
+                -moz-transform: skewX(-33deg);
+                transform: skewX(-33deg);
+                z-index: 1;
+                border-right: 1px solid black;
+            }
+        }
+    }
+    & .social, .email{
+        padding: 12px 5px 5px;
+    }
+    & .social{
+        background: $complementary-color;
+        & .icon{
+            color: white;
+            background: lighten($complementary-color, 10%);
+            border-radius: 100%;
+            padding: 5px;
+            &:hover{
+                background: #3b5998;
+            }
+        }
+    }
+    & .email{
+        background: lighten($complementary-color, 10%);
+    }
+}
+.policy-list, .reminder-list{
+    & li{
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+}
+.reminder-list{
+    @media screen and (min-width: 992px){
+        margin-left: 120px;
+        & li{
+            margin-bottom: 28px;
+        }
+    }
+}
+footer{
+    background: $complementary-color;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    & .footer-menu{
+        padding: 0;
+        margin-bottom: 0;
+        @media screen and (min-width: 768px){
+            & li{
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+        }
+    }
+    & .copyright{
+        margin-top: 5px;
+        font-size: .7em;
+        letter-spacing: .1em;
+    }
+}

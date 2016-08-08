@@ -1,0 +1,58 @@
+// Navbar
+.navbar{
+    background: white;
+    border-radius: 0;
+    margin-bottom: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    top: 0;
+    @media screen and (min-width: 768px){
+        position: initial;
+    }
+    & .logo{
+        width: 100px;
+        padding: 10px;
+    }
+    & .navbar-header{
+        position: relative;
+        z-index: 1000;
+    }
+    & .navbar-nav{
+        & .glyphicon{
+            margin-right: 8px;
+        }
+        & a{
+            &:hover{
+                color: lighten($primary-color, 10%) !important;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px){
+        & .collapse{
+            position: relative;
+        }
+        & .navbar-nav{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            & a.active{
+                background: initial;
+                color: lighten($primary-color, 10%) !important;
+            }
+        }
+    }
+
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+    background: whitesmoke;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: $primary-color;
+}
+.navbar-default .navbar-toggle{
+    border-color: transparent;
+}

@@ -1,0 +1,247 @@
+// Base Styles
+*{
+    outline: none !important;
+}
+body{
+    background: $primary-color;
+    font-family: $base-font;
+    padding-top: 65px;
+    @media screen and (min-width: 768px){
+        padding-top: initial;
+    }
+}
+a, a:hover{
+    color: lighten($primary-color, 45%);
+    text-decoration: none !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $heading-font;
+}
+p{
+    letter-spacing: .1em;
+}
+table{
+    @media screen and (min-width: 768px){
+        font-size: 1.1em;
+    }
+    & th{
+        background: $yellow;
+        color: black;
+        font-family: $heading-font;
+        letter-spacing: .2em;
+    }
+    & tr:hover{
+        background: lightgrey !important;
+    }
+}
+textarea{
+    resize: none;
+}
+input, textarea{
+    letter-spacing: .05em;
+}
+// Base ids and classes
+.btn, .btn:focus{
+    background: $primary-color;
+    color: white;
+    &:hover{
+        background: lighten($primary-color, 10%);
+        color: white;
+        transition: all .3s ease-in-out;
+    }
+}
+.top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    background: rgba(0,0,0,.45);
+    color: white;
+    padding: 7px 10px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+.row.row-md-eq-height {
+    @media screen and (min-width: 992px){
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        & > [class*='col-'] {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+    }
+}
+.input-lg{
+    font-size: inherit;
+}
+.modal-header{
+    background: $primary-color;
+    color: white;
+}
+.close, .close:hover{
+    color: white;
+}
+#branchesAccordion{
+    margin-top: 20px;
+    & .panel-heading{
+        background: $complementary-color;
+        color: white;
+    }
+    & table th{
+        background: $primary-color;
+        color: white;
+    }
+}
+.contact-form{
+    .form-control{
+        &:focus{
+            webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba($primary-color, .4);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba($primary-color, .4);
+        }
+    }
+    input.form-control{
+        margin: 15px 0;
+        &:first-child{
+            margin-top: 0;
+        }
+        @media screen and (min-width: 992px){
+            margin: 8px 0;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    & textarea{
+        height: 100%;
+    }
+    & .field{
+        background: whitesmoke;
+        border: 0;
+    }
+    & .btn{
+        font-size: 1.2em;
+        margin-top: 10px;
+        margin-right: 15px;
+    }
+}
+// LightGallery
+.lg-backdrop, .lg-outer .lg-thumb-outer{
+    background: rgba(0,0,0,.75);
+}
+.lg-toolbar{
+    background: transparent;
+}
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover{
+    border-color: lighten($primary-color, 10%);
+}
+.lg-progress-bar .lg-progress{
+    background: lighten($primary-color, 10%);
+}
+.lg-icon{
+    border-radius: 100% !important;
+    font-size: .8em !important;
+    @media screen and (min-width: 768px){
+        font-size: 22px !important;
+    }
+}
+.peso-sign{
+    font-size: .8em;
+    float: left;
+}
+
+// Fonts
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?5octk9');
+  src:  url('../fonts/icomoon.eot?5octk9#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?5octk9') format('truetype'),
+    url('../fonts/icomoon.woff?5octk9') format('woff'),
+    url('../fonts/icomoon.svg?5octk9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-stack:before {
+  content: "\e92e";
+}
+.icon-forward:before {
+  content: "\e969";
+}
+.icon-user-tie:before {
+  content: "\e976";
+}
+.icon-meter:before {
+  content: "\e9a6";
+}
+.icon-meter2:before {
+  content: "\e9a7";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+
+
+// Heading style
+.heading{
+    margin-bottom: 25px;
+    .headline{
+        font-weight: 700;
+        & span{
+            position: relative;
+            &:before, &:after{
+                content: "";
+                position: absolute;
+                border-top: 1px solid lightgrey;
+                width: 50px;
+                height: 3px;
+                top: 50%;
+            }
+            &:before{
+                right: 100%;
+                margin-right: 15px;
+            }
+            &:after{
+                left: 100%;
+                margin-left: 15px;
+            }
+            @media screen and (min-width: 768px){
+                &:before, &:after{
+                    width: 120px;
+                }
+                &:before{
+                    margin-right: 20px;
+                }
+                &:after{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
