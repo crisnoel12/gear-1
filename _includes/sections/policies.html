@@ -6,15 +6,9 @@
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <ol class="text-left policy-list">
-                    <li>No smoking while driving.</li>
-                    <li>Wearing of slippers and sandals are not allowed.</li>
-                    <li>Student under influence of liquor or prohibited drugs will be not given driving lessons.</li>
-                    <li>No wearing of shorts pants and sleeveless shirt’s for male student.</li>
-                    <li>No chaperon for male students.</li>
-                    <li>No male chaperon for female students. (Only one female chaperon is allowed).</li>
-                    <li>Children below 7 yrs. Old are not allowed as chaperon.</li>
-                    <li>Cellular phones should be turned off during lecture and actual driving lessons.</li>
-                    <li>Driving schedules to be cancelled must be informed 2 days before the arranged schedule.</li>
+                    {% for policy in site.data.policies %}
+                        <li>{{ policy }}</li>
+                    {% endfor %}
                 </ol>
             </div>
         </div>
